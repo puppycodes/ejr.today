@@ -1,0 +1,41 @@
+body {
+
+}
+
+.post-title
+{
+  font-size: 20px;
+}
+.vimeo-container iframe {
+  width: 50%;
+  height: 400px;
+  margin: auto;
+  display: block;
+}
+
+.image img
+{
+width: 50%;
+margin: auto;
+display: block;
+}
+
+/** Swiper **/
+
+.swiper-button-next, .swiper-button-prev {
+
+    top: -200px !important;
+
+}
+
+.swiper-button-next {
+  position: relative !important;
+  float: right;
+
+}
+
+.swiper-button-prev {
+  position: relative !important;
+  float: left;
+
+}
