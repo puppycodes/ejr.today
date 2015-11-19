@@ -36,7 +36,7 @@
 
     {% for item in cms.posts %}
 
-    <span class="post-title"> {{ item.name }} </span>
+
 
 
       <!-- Swiper -->
@@ -52,14 +52,15 @@
                  </div>
                  {% endfor %}
 
+
                   {% for row in item.slides %}
-            
+
               <!-- Add Arrows -->
               <div class="swiper-button-next"></div>
               <div class="swiper-button-prev"></div>
             </div>
             {% endfor %}
-
+     <span class="post-title"> {{ item.name }} </span>
              </div>
            </div>
 
