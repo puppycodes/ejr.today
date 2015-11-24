@@ -29,17 +29,20 @@
 
     <link rel="shortcut icon" href="/static/images/favicon.png">
     <link rel="apple-touch-icon" href="/static/images/touch-icon.png">
-
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.0/normalize.min.css">
 
     {# Put your CSS in here and we'll minify it into one file. No CDN scripts. More info: #}
     {# http://www.webhook.com/docs/minify-your-js-and-css/ #}
 
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-MfvZlkHCEqatNoGiOXveE8FIwMzZg4W85qfrfIFBfYc= sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+
+
     <!-- build:css /static/css/minified.css -->
     <link rel="stylesheet" href="/static/css/main.css"/>
+    <link rel="stylesheet" href="/static/css/hamburgler.css"/>
     <link rel="stylesheet" href="/static/css/wysiwyg_figures.css"/>
     <!-- endbuild -->
-    <link rel="stylesheet" href="/static/css/swiper.min.css"/>
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
 
@@ -47,17 +50,44 @@
     {% block head_extra %}{% endblock %}
   </head>
   <body {% block body_attributes %}{% endblock %}>
+
+
+       <div class="container">
+         <div class="mobilenav col-xs-12 col-sm-6 col-md-4">
+           <li><a href="/about">about</a></li>
+           <li><a href="/ejrbody">ejr.body</a></li>
+      </div>
+         <a href="javascript:void(0)" class="icon">
+        <div class="hamburger">
+        <div class="menui top-menu"></div>
+        <div class="menui mid-menu"></div>
+        <div class="menui bottom-menu"></div>
+        </div>
+      </a>
+                     <div class="logo-ej">
+                     <span> <a href="/">ejr.today </a> </span>
+                   </div>
+
+<div class="menu">
+  <ul>
+    <li><a href="#">about</a></li>
+    <li><a href="#">ejr.body</a></li>
+  </ul>
+
+</div>
+
     {% block body %}
+
       <!--[if lt IE 7]>
         <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
       <![endif]-->
 
-      {% block header %}
-        {% include "templates/partials/header.html" %}
-      {% endblock %}
 
+
+         </a>
       {# By default, your inner pages will load into this block. #}
       {% block content %}{% endblock %}
+        </div>
 
       {% block footer %}
         {% include "templates/partials/footer.html" %}
@@ -68,13 +98,13 @@
       {# Put your JS in here and we'll minify it into one file. No CDN scripts. More info: #}
       {# http://www.webhook.com/docs/minify-your-js-and-css/ #}
 
-      <script src="/static/javascript/swiper.min.js"></script>
 
       <!-- build:js /static/javascript/minified.js -->
       <script src="/static/javascript/main.js"></script>
+      <script src="/static/javascript/hamburgler.js"></script>
       <!-- endbuild -->
 
-
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha256-Sk3nkD6mLTMOF0EOpNtsIry+s1CsaqQC1rVLTAy+0yc= sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
 
       {% block scripts_extra %}{% endblock %}
 

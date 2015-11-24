@@ -1,0 +1,33 @@
+{# ------------------------------------------------------- #}
+
+{# LIST VIEW OF ALL ejrbody #}
+
+{# Webhook uses the SWIG.js (like Djagno/Twig) templating system. Their documentation is here: #}
+{# http://paularmstrong.github.io/swig/docs/tags/ #}
+
+{# Learn about calling data into Webhook pages here: #}
+{# http://www.webhook.com/docs/template-rules-and-filters/ #}
+
+{# ------------------------------------------------------- #}
+
+{# Confused what extends and blocks do? Watch a primer: #}
+{# http://www.webhook.com/docs/template-inheritance-blocks/ #}
+{% extends "templates/partials/base.html" %}
+
+{# This sets our page <title>. It will append ejrbody to the site title defined in base.html #}
+{% block title %}{% parent %} - ejrbody{% endblock %}
+
+{% block content %}
+
+  {% set data = cms.ejrbody %}
+<div class="blog-container">
+    {% for object in data %}
+        <div class="blog-post">
+          <div class="title" style="color:black;{% if object.hide_title == true %}opacity:0;{% else %}{% endif %}"> {{ object.name }}</div>
+          <div class="post-container">{{ object.wysiwyg_text|safe }} </div>
+    {% endfor %}
+</div>
+
+
+
+{% endblock %}

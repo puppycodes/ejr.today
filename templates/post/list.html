@@ -1,6 +1,6 @@
 {# ------------------------------------------------------- #}
 
-{# YOUR HOMEPAGE #}
+{# LIST VIEW OF ALL post #}
 
 {# Webhook uses the SWIG.js (like Djagno/Twig) templating system. Their documentation is here: #}
 {# http://paularmstrong.github.io/swig/docs/tags/ #}
@@ -14,26 +14,18 @@
 {# http://www.webhook.com/docs/template-inheritance-blocks/ #}
 {% extends "templates/partials/base.html" %}
 
-{# This sets our page <title>. It will append "- Homepage" to the site title defined in base. #}
-{% block title %}{% parent %} - Homepage{% endblock %}
+{# This sets our page <title>. It will append post to the site title defined in base.html #}
+{% block title %}{% parent %} - post{% endblock %}
 
 {% block content %}
 
-<div class="header-background">
-<span class="logo">ejr.today</span>
-</div>
-
 
   {% set data = cms.post %}
-<div class="posts">
+
+
     {% for object in data %}
-  <a href="{{ url(object) }}">
-  <div class="col-xs-12 col-sm-6 col-md-4 post">
-    <div class="individual-post-grid" style="background-image:url('{{object.cover_image|imageCrop(300)}}'); background-size:cover; background-position:center center; background-repeat: no-repeat; height: 100%;"> </div>
-  <!--<div class="caption">{{ object.name }}</div> -->
-  </div>
-    </a>
+    <a href="{{ url(object) }}">{{ object.name }}</a>
     {% endfor %}
-</div>
+
 
 {% endblock %}
