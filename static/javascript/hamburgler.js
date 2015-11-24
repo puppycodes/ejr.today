@@ -1,7 +1,7 @@
 // HAMBURGLERv2
 function togglescroll () {
   $('body').on('touchstart', function(e){
-    if ($('body').hasClass('noscroll')) {
+    if ($('body').hasClass('')) {
       e.preventDefault();
     }
   });
