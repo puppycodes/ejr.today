@@ -1,6 +1,6 @@
 html {
   overflow-y: scroll;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Lato', sans-serif !important;
 }
 
 body {
@@ -126,7 +126,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 
 .header-background {
   font-size: 500px;
-  font-family: 'lato' sans-serif;
+  font-family: 'Lato', sans-serif;
   position: fixed;
 
 }
