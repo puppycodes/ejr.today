@@ -63,7 +63,7 @@ left: 4px;
 .mobilenav {
     font-family: inherit;
     top: 0;
-    left: :0;
+    left: 0;
     z-index: 999;
     display: none;
     position: fixed;
