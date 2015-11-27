@@ -173,7 +173,7 @@ filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
 /** Mobile Nav **/
 
 .nudge {
- padding-right: 0px !important;
+ /*padding-right: 0px !important;*/
 }
 
 .icon {
