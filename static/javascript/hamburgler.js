@@ -11,9 +11,10 @@ function togglescroll () {
 $(document).ready(function () {
     togglescroll()
     $(".icon").click(function () {
-        $(".mobilenav").fadeToggle(500);
+        $(".mobilenav").fadeToggle(300);
         $(".top-menu").toggleClass("top-animate");
-        $("body").toggleClass("noscroll");
+        $("html").toggleClass("noscroll");
+        $(".container").toggleClass("nudge");
         $(".mid-menu").toggleClass("mid-animate");
         $(".bottom-menu").toggleClass("bottom-animate");
     });
@@ -23,9 +24,9 @@ $(document).ready(function () {
 
 $(document).keydown(function(e) {
     if (e.keyCode == 27) {
-        $(".mobilenav").fadeOut(500);
+        $(".mobilenav").fadeOut(300);
         $(".top-menu").removeClass("top-animate");
-        $("body").removeClass("noscroll");
+        $("html").removeClass("noscroll");
         $(".mid-menu").removeClass("mid-animate");
         $(".bottom-menu").removeClass("bottom-animate");
     }
