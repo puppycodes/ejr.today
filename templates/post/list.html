@@ -21,6 +21,7 @@
 
 
   {% set data = cms.post %}
+  {% set data = data|sort('publish_date', true) %}
 
 
     {% for object in data %}

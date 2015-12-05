@@ -20,6 +20,7 @@
 {% block content %}
 
   {% set data = cms.ejrbody %}
+  {% set data = data|sort('publish_date', true) %}
 <div class="blog-post-container">
     {% for object in data %}
         <div class="blog-post">
